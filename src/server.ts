@@ -7,5 +7,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`🚀 Api listening on port 👉 ${port}`)
+  console.log(`🚀 Api listening on port 👉 ${port} and process: ${process.pid}`)
 })

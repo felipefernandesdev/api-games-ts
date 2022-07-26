@@ -10,7 +10,10 @@
     "express": "^4.18.1"
   },
   "scripts": {
-    "dev": "tsnd --respawn --transpile-only --ignore-watch node_modules ./src/server.ts"
+    "dev": "tsnd --respawn --transpile-only --ignore-watch node_modules ./src/server.ts",
+    "build": "tsc",
+    "build:dev": "tsc -w",
+    "start": "rm -rf ./dist && npm run build && node ./dist/server.js"
   },
   "devDependencies": {
     "@types/dotenv": "^8.2.0",
