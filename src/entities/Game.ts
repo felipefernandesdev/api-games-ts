@@ -1,5 +1,16 @@
 import { randomUUID as uuid } from 'crypto';
 
+export interface IGameDTO {
+  id?: string;
+  name: string;
+  releaseData: string;
+  designer: string;
+  developer: string;
+  genre: string;
+  mode: string;
+  platform: string;
+}
+
 class Game {
   id?: string;
   name!: string;
@@ -9,8 +20,6 @@ class Game {
   genre!: string;
   mode!: string;
   platform!: string;
-  created!: Date;
-  updated!: Date;
 
   constructor() {
     if (!this.id) {
