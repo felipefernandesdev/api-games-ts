@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 
-import { IGameDTO } from '../entities/Game';
-import { GameRepository } from '../repositories/GameRepository';
+import { IGameDTO } from '../../infra/entities/Game';
+import { GameRepository } from '../../infra/repositories/GameRepository';
 import { RegisterGameUseCase } from './RegisterGameUseCase';
 
 const factory = () => {

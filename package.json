@@ -20,8 +20,11 @@
       "yarn lint --fix"
     ]
   },
+  "prisma": {
+    "schema": "./src/shared/infra/prisma/schema.prisma"
+  },
   "scripts": {
-    "dev": "tsnd --exit-child --respawn --transpile-only --ignore-watch node_modules ./src/server.ts",
+    "dev": "tsnd --exit-child --respawn --transpile-only --ignore-watch node_modules ./src/shared/infra/http/server.ts",
     "build": "tsc",
     "build:dev": "tsc -w",
     "start": "rm -rf ./dist && npm run build && node ./dist/server.js",
