@@ -4,7 +4,7 @@ import { registerRoutes } from './register.routes';
 
 const router = Router();
 
-router.use('/', registerRoutes);
+router.use('/register', registerRoutes);
 
 router.get('/', (request: Request, response: Response) => {
   response.status(200).send('Welcome to API Game');
