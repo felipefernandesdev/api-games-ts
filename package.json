@@ -29,6 +29,8 @@
     "build:dev": "tsc -w",
     "start": "rm -rf ./dist && npm run build && node ./dist/server.js",
     "lint": "eslint src/**/*.ts --max-warnings=0",
+    "prisma:generate": "prisma generate --schema=./src/shared/infra/prisma/schema.prisma",
+    "prisma:migrate": "prisma migrate dev --schema=./src/shared/infra/prisma/schema.prisma",
     "prepare": "husky install"
   },
   "devDependencies": {
