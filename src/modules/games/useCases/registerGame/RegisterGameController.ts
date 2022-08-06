@@ -5,7 +5,6 @@ import { IGameDTO } from '../../infra/entities/Game';
 import { RegisterGameUseCase } from './RegisterGameUseCase';
 
 class RegisterGameController {
-  constructor(private useCase: RegisterGameUseCase) {}
   async handle(request: Request, response: Response): Promise<Response> {
     const { designer, developer, genre, mode, name, platform, releaseData }: IGameDTO = request.body;
     const registerUseCase = container.resolve(RegisterGameUseCase);
