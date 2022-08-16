@@ -14,10 +14,10 @@ app.use(router);
 
 app.use((error: Error, req: Request, res: Response, next: NextFunction) => {
   if (error instanceof CelebrateError) {
-    return res.status(400).json({ message: error });
+    return res.status(400).json({ message: error.message });
   }
 
-  res.status(500).json({
+  return res.status(500).json({
     status: 'Error',
     message: 'Internal Server Error'
   });
