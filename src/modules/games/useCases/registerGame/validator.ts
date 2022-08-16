@@ -1,14 +1,16 @@
 import { Joi, Segments } from 'celebrate';
 
+import { customMessage } from '../../../../utils/errors';
+
 const registerValidator = {
   [Segments.BODY]: Joi.object().keys({
-    name: Joi.string().required(),
-    releaseData: Joi.string().required(),
-    designer: Joi.string().required(),
-    developer: Joi.string().required(),
-    genre: Joi.string().required(),
-    mode: Joi.string().required(),
-    platform: Joi.string().required()
+    name: Joi.string().required().messages(customMessage('name')),
+    releaseData: Joi.string().required().messages(customMessage('releaseData')),
+    designer: Joi.string().required().messages(customMessage('designer')),
+    developer: Joi.string().required().messages(customMessage('developer')),
+    genre: Joi.string().required().messages(customMessage('genre')),
+    mode: Joi.string().required().messages(customMessage('mode')),
+    platform: Joi.string().required().messages(customMessage('platform'))
   })
 };
 
